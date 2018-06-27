@@ -20,8 +20,7 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/thehardtimes";
 
 
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+
 var link;
 var summary;
 var title;
@@ -64,7 +63,8 @@ var routes = require("./controllers/controllers.js");
 
 app.use(routes);
 
-
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
   
