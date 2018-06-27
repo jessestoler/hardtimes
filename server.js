@@ -9,7 +9,7 @@ app.set("view engine", "handlebars");
 var cheerio = require("cheerio");
 var request = require("request");
 var db = require("./models");
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 var results = [];
 
 
