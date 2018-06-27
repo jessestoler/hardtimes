@@ -17,7 +17,7 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.PORT || "mongodb://localhost/thehardtimes";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/thehardtimes";
 
 
 mongoose.Promise = Promise;
